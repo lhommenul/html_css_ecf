@@ -44,5 +44,16 @@
                 align-items: center;
             }
                 .date_icon_card{
-                    margin: 0.3em;
+                    margin: 0.3em; 
                 }
+                    .link_card_next{
+                        padding: 0.625em 0px;
+                        width: 100%;
+                        background-color: var(--bg_orange);
+                        display: flex;
+                        justify-content: center;
+                        color: var(--bg_white);
+                    }
+                        .icon_link_card{
+                            margin: 0px 1em;
+                        }
