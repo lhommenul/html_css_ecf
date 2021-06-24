@@ -1,0 +1,72 @@
+/* =========================== RESET CSS =========================== */
+html{ font-size: 100%; --default_font_std: 'Montserrat', sans-serif;--default_font_title:'Raleway', sans-serif}
+*{ margin: 0px; padding: 0px; font-family: var(--default_font_std)}
+ul{ list-style: none; }
+p{ font-size: 1rem; line-height: 1.5em; }
+h1{ font-family: var(--default_font_std); font-size: 3.125rem; line-height: 3.125rem; }
+h2{ font-family: var(--default_font_std); font-size: 2.5rem; line-height: 2.5rem; }
+h3{ font-family: var(--default_font_std); font-size: 2rem; line-height: 2.1rem; }
+body{padding:0px; margin:0px;--invisible:rgba(0,0,0,0);}
+button{border: none;padding: 1em;}
+/* ================================================================= */
+
+/* CHANGE CDN FONTS TO LOCAL !!!!!!!!!!!! */
+
+
+:root{
+    --bg_white:#FFFFFF;
+    --bg_orange:#FD7E37;
+    --bg_dark_grey:#707070;
+    --bg_grey:#00000080;
+    --bg_light_grey:#00000029;
+    --bg_dark_brown:#331100;
+    --bg_brown:#663014;
+}
+
+/* ======== CONTAINER ======== */
+.container{
+    display: grid;
+    grid-template-columns: auto minmax(20em,90em) auto;
+}
+    .to_center{
+        grid-column: 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+/* ======== HEADER ======== */
+header{
+    background-color: var(--bg_orange);
+}
+    .header_title_site{
+        font-size: 3em;
+        font-weight: bold;
+        color: var(--bg_white);
+    }
+    .header_nav{
+
+    }
+        .header_list_items{
+            padding: 1.75em 1.25em;
+        }
+            .header_nav_list{
+                display: flex;
+                flex-direction: row;
+            }
+                .header_nav_link{
+                    font-size: 1.25em;
+                    font-weight: 600;
+                    font-family: var(--default_font_std);
+                    cursor: pointer;
+                    padding: 0.6em 1.25em;
+                    color: var(--bg_white);
+                    background-color: var(--invisible);
+                }
+                .header_nav_link:hover{
+                    color: var(--bg_orange);
+                    background-color: var(--bg_white);
+                }
+/* ======== CONTENT CENTER ======== */
+
+/* ======== FOOTER ======== */
