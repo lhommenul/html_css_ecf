@@ -9,8 +9,45 @@
     .list_card{
         margin: 1em 0em;
         display: grid;
-        grid-template-columns: repeat(auto-fit,1fr);
         row-gap: 1em;
     }
 
-    
+/* media */
+
+/*  320px */
+@media screen and (min-width:20rem) {
+
+}
+/*  375px */
+@media screen and (min-width:23.43rem) {
+    html{
+        font-size: 100%;
+    }
+}
+/*  425px */
+@media screen and (min-width:26.56rem) {
+
+}
+/*  768px */
+@media screen and (min-width:48rem) {
+    .list_card{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+/*  1024px */
+@media screen and (min-width:64rem) {
+    .list_card{
+        column-gap: 2em;
+    }
+}
+/*  1440px */
+@media screen and (min-width:90rem) {
+    .list_card{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+/*  2560px */
+@media screen and (min-width:160rem) {
+
+}
+
