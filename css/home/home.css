@@ -41,6 +41,7 @@ main{
                 margin: 0.5em;
             }
             .bubble_btn_redirect{
+                text-decoration: none;
                 padding: 0.8em 1.3em;
                 background-color: var(--bg_orange);
                 color: var(--bg_white);

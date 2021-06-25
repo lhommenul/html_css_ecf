@@ -21,7 +21,7 @@
     .list_meeting{
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(2,1fr);
-        column-gap: 10vw;
+        column-gap: 8rem;
     }
 }
 /*  1024px */
@@ -29,14 +29,13 @@
     .list_meeting{
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: repeat(1,1fr);
-        column-gap: 10vw;
     }
     .actu_list_tiems{
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(2,1fr);
     }
         .card{
-            max-width: 90%;
+            max-width: 100%;
         }
     .list_card_module{
         grid-template-columns: repeat(2,1fr);
@@ -45,7 +44,37 @@
 }
 /*  1440px */
 @media screen and (min-width:90rem) {
+    main{
+        grid-column: 1/4;
+    }
+    .section_meeting{
+        grid-column: 2;
+    }
+    .bubble{
+        grid-column: 2;
+        display: grid;
+        grid-template-columns: auto 60%;
+    }
+        .bubble_black{
+            grid-column: 2;
+        }
+    .actu_list_tiems{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 1fr;
+    }
+    .list_meeting{
+        max-width: 100%;
+        grid-template-columns: repeat(4,1fr);
 
+    }
+}
+@media screen and (min-width:120em){
+    .section_actu{
+        grid-column: 2;
+    }
+    .section_module{
+        grid-column: 2;
+    }
 }
 /*  2560px */
 @media screen and (min-width:160rem) {
