@@ -29,7 +29,6 @@ button{border: none;padding: 1em;}
     grid-template-columns: 2% minmax(96%,79.75em) 2%;
 }
     .to_center{
-        place-self: center;
         grid-column: 1/4;
         max-width: 79.75em;
         display: flex;
@@ -37,6 +36,11 @@ button{border: none;padding: 1em;}
         align-items: center;
         justify-content: space-around;
     }
+@media screen and (min-width:90rem) {
+    .to_center{
+        place-self: center;
+    }
+}
 /* 1800px */
 @media screen and (min-width:112.5em){
     .container{
@@ -165,8 +169,4 @@ footer{
         flex-direction: row;
         justify-content: space-between;
     }
-}
-/* 1800px */
-@media screen and (min-width:112.5em){
-    
 }

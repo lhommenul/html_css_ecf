@@ -48,7 +48,7 @@
         grid-column: 1/4;
     }
     .section_meeting{
-        grid-column: 2;
+        grid-column: 1/4;
     }
     .bubble{
         grid-column: 2;
