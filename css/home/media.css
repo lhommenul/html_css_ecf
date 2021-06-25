@@ -14,10 +14,6 @@
 }
 /*  768px */
 @media screen and (min-width:48rem) {
-    .card{
-        place-self: center;
-        max-width: 70%;
-    }
     .list_meeting{
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(2,1fr);
@@ -34,9 +30,6 @@
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(2,1fr);
     }
-        .card{
-            max-width: 100%;
-        }
     .list_card_module{
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: 1fr;

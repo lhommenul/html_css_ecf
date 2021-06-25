@@ -68,41 +68,6 @@ main{
         gap: 2em;
         margin: 2em 0em;
     }
-        .card{
-            overflow: hidden;
-            border-radius: 4px 4px 0px 0px;
-            box-shadow: 0px 0px 48px #00000029;
-            margin: 1em 0em;
-            display: flex;
-            flex-direction: column;
-            justify-content: left;
-            align-items: center;
-            text-align: center;
-        }
-            .card_space{
-                padding: 3.46%;
-            }
-            .date_card_spe{
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-            }
-                .date_icon_card{
-                    margin: 0.3em; 
-                }
-                    .link_card_next{
-                        padding: 0.625em 0px;
-                        width: 100%;
-                        background-color: var(--bg_orange);
-                        display: flex;
-                        justify-content: center;
-                        color: var(--bg_white);
-                    }
-                        .icon_link_card{
-                            display: none;
-                            margin: 0px 1em;
-                        }
 
 /* ===== SECTION MEETING ===== */
 .section_meeting{

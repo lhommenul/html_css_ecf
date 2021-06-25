@@ -1,0 +1,16 @@
+ main{
+     grid-column: 2;
+ }
+ .section_formation{
+     grid-column: 1/4;
+     text-align: center;
+     padding: 1em 0em;
+ }
+    .list_card{
+        margin: 1em 0em;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,1fr);
+        row-gap: 1em;
+    }
+
+    
