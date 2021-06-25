@@ -1,4 +1,20 @@
 
+
+
+
+
+
+
+
+body {
+    width: 100vw;
+}
+/* main */
+main{
+    grid-column: 1/4;
+    /* width: 100%; */
+}
+
 /* ===== SECTION HEADER ===== */
 .section_top_home{
     max-height: 44.4em;
@@ -7,8 +23,36 @@
     .background_image_header_section{
         width: 100%;
         height: 100%;
+        grid-column: 1/4;
+        grid-row: 1;
         object-fit:cover;
     }
+    .bubble{
+        justify-self: flex-end;
+        align-self: center;
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+        .bubble_black{
+            background-color: rgba(0, 0, 0, 0.5);
+            color: var(--bg_white);
+            display: flex;
+            flex-direction: column;
+            padding: 0.5em;
+            max-width: 66.53%;
+        }
+            .bubble_title{
+                
+            }
+            .bubble_btn_redirect{
+                place-self: end;
+                padding: 0.6em 0.3em;
+                background-color: var(--bg_orange);
+                color: var(--bg_white);
+            }
 
 /* ===== SECTION ACTU ===== */
 
@@ -36,7 +80,7 @@
             align-items: flex-start;
         }
             .card_space{
-                padding: 0.95em;
+                padding: 3.46%;
             }
             .date_card_spe{
                 display: flex;
@@ -94,10 +138,14 @@
 /* ===== SECTION MODULE ===== */
 .section_module{
     grid-column: 2;
+    margin-bottom: 2.5em;
 }
-    .card_module{
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
-        align-items: flex-start;
+    .module_title{
+        margin: 1.5em 0px;
+        text-align: center;
+    }
+    .list_card_module{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap:2em; 
     }

@@ -1,0 +1,53 @@
+/*  320px */
+@media screen and (min-width:20rem) {
+
+}
+/*  375px */
+@media screen and (min-width:23.43rem) {
+    html{
+        font-size: 100%;
+    }
+}
+/*  425px */
+@media screen and (min-width:26.56rem) {
+
+}
+/*  768px */
+@media screen and (min-width:48rem) {
+    .card{
+        place-self: center;
+        max-width: 70%;
+    }
+    .list_meeting{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        column-gap: 10vw;
+    }
+}
+/*  1024px */
+@media screen and (min-width:64rem) {
+    .list_meeting{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(1,1fr);
+        column-gap: 10vw;
+    }
+    .actu_list_tiems{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+        .card{
+            max-width: 90%;
+        }
+    .list_card_module{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 1fr;
+    }
+}
+/*  1440px */
+@media screen and (min-width:90rem) {
+
+}
+/*  2560px */
+@media screen and (min-width:160rem) {
+
+}
