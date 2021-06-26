@@ -27,19 +27,20 @@ main{
 }
 /*  768px */
 @media screen and (min-width:48rem) {
-
+    .list_cards_actu{
+        grid-template-columns: repeat(2,1fr);
+        /* gap: 2e  m; */
+    }
 }
 /*  1024px */
 @media screen and (min-width:64rem) {
-
-}
-/*  1440px */
-@media screen and (min-width:90rem) {
     .list_cards_actu{
-        display: grid;
         grid-template-columns: repeat(3,1fr);
         gap: 2em;
     }
+}
+/*  1440px */
+@media screen and (min-width:90rem) {
 }
 /*  2560px */
 @media screen and (min-width:160rem) {
