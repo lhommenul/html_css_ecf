@@ -35,7 +35,11 @@ main{
 }
 /*  1440px */
 @media screen and (min-width:90rem) {
-
+    .list_cards_actu{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2em;
+    }
 }
 /*  2560px */
 @media screen and (min-width:160rem) {
