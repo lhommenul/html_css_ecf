@@ -2,11 +2,13 @@ main{
     grid-column: 2;
 }
 .container_cards{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
+    grid-column: 1/4;
 }
-
+    .list_cards_actu{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
 
 
 
