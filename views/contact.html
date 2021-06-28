@@ -5,8 +5,8 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/actu/actu.css">
-<title>Document</title>
+    <link rel="stylesheet" href="../css/contact/contact.css">
+<title>Contactez-Nous</title>
 </head>
 <body class="container">
     <!-- ======== HEADER ======== -->
@@ -16,21 +16,21 @@
     <main>
         <section>
             <h1>Nous Contacter</h1>
-            <form action="/views/contact.html" method="POST">
-                <label for="input_name">
+            <form action="/views/contact.html" class="form_contact" method="POST">
+                <label class="label_inpna" for="input_name">
                     Votre nom
                     <input type="text" id="input_name" name="nom" placeholder="Entrez votre nom">
                 </label>
-                <label for="input_email">
+                <label class="label_inpem" for="input_email">
                     Votre e-mail
                     <input type="text" id="input_email" name="email" placeholder="Entrez votre adresse e-mail">
                 </label>
-                <label for="text_area_message">
+                <label class="label_inpaream" for="text_area_message">
                     Votre message
                     <textarea name="" id="text_area_message" name="message" placeholder="Tapez votre message"></textarea>
                 </label>
+                <button type="submit" class="link_card_next">Envoyer<img class="icon_link_card" src="/assets/home/icon/right_circle.svg" alt="icon flèche"></button>
             </form>
-            <button type="submit">Envoyer<img src="/assets/home/icon/right_circle.svg" alt="icon flèche"></button>
         </section>
     </main>
     <!-- ======== FOOTER ======== -->
