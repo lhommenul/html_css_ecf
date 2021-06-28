@@ -1,0 +1,48 @@
+main{
+    grid-column: 2;
+}
+.container_cards{
+    grid-column: 1/4;
+}
+    .list_cards_actu{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+
+
+/* ===== MEDIA SCREEN ===== */
+/*  320px */
+@media screen and (min-width:20rem) {
+
+}
+/*  375px */
+@media screen and (min-width:23.43rem) {
+
+}
+/*  425px */
+@media screen and (min-width:26.56rem) {
+
+}
+/*  768px */
+@media screen and (min-width:48rem) {
+    .list_cards_actu{
+        grid-template-columns: repeat(2,1fr);
+        /* gap: 2e  m; */
+    }
+}
+/*  1024px */
+@media screen and (min-width:64rem) {
+    .list_cards_actu{
+        grid-template-columns: repeat(3,1fr);
+        gap: 2em;
+    }
+}
+/*  1440px */
+@media screen and (min-width:90rem) {
+}
+/*  2560px */
+@media screen and (min-width:160rem) {
+
+}
