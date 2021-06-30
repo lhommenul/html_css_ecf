@@ -70,10 +70,28 @@ let list = [];
 (()=>{
 for (let index = 0; index < 4; index++) {
     let l = []
-    for (let compteur = 0; compteur < 6; compteur++) {
+    for (let compteur = 0; compteur < 3; compteur++) {
         l.push(new Card({
-            src:`https://picsum.photos/900/300?random=${index+compteur}`,
-            srcset:`https://picsum.photos/900/300?random=${index+compteur} 2x`,
+            src:`/assets/home/picture/Keyboard.png`,
+            srcset:`/assets/home/picture/Keyboard_2x.png 2x`,
+            alt:"photo d'un langage de programmation",
+            date:"12/10/9992",
+            title:"Je suis le titre",
+            message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô",
+            link:"/"
+        }))
+        l.push(new Card({
+            src:`/assets/home/picture/Code.png`,
+            srcset:`/assets/home/picture/Code_2x.png 2x`,
+            alt:"photo d'un langage de programmation",
+            date:"12/10/9992",
+            title:"Je suis le titre",
+            message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô",
+            link:"/"
+        }))
+        l.push(new Card({
+            src:`/assets/home/picture/Computer.png`,
+            srcset:`/assets/home/picture/Computer_2x.png 2x`,
             alt:"photo d'un langage de programmation",
             date:"12/10/9992",
             title:"Je suis le titre",
