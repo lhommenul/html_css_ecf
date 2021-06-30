@@ -64,59 +64,113 @@ class Card{
 let list = [];
 
 (()=>{
-// Je veux 4 pages donc 
-for (let index = 0; index < 4; index++) {
-    let l = []
-    // PUSH une liste de 6 ELEMENTS
-    for (let compteur = 0; compteur < 2; compteur++) {
-        l.push(new Card({
-            src:`/assets/home/picture/Keyboard.png`,
-            srcset:`/assets/home/picture/Keyboard_2x.png 2x`,
-            alt:"photo d'un langage de programmation",
-            date:"12/10/9992",
-            title:"Je suis le titre",
-            message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô",
-            link:"/"
-        }))
-        l.push(new Card({
-            src:`/assets/home/picture/Code.png`,
-            srcset:`/assets/home/picture/Code_2x.png 2x`,
-            alt:"photo d'un langage de programmation",
-            date:"12/10/9992",
-            title:"Je suis le titre",
-            message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(Math.random*6),
-            link:"/"
-        }))
-        l.push(new Card({
-            src:`/assets/home/picture/Computer.png`,
-            srcset:`/assets/home/picture/Computer_2x.png 2x`,
-            alt:"photo d'un langage de programmation",
-            date:"12/10/9992",
-            title:"Je suis le titre",
-            message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô",
-            link:"/"
-        }))
+    let opt = {
+        pages:4,
+        start:0
+    }, container_card_slider = document.getElementsByClassName('list_cards_actu')[0];
+
+    // Je veux 4 pages donc 
+    for (let index = 0; index < opt.pages; index++) {
+        // PUSH une liste de 6 ELEMENTS
+        (()=>{
+            let l = []
+            l.push(new Card({
+                src:`/assets/home/picture/Keyboard.png`,
+                srcset:`/assets/home/picture/Keyboard_2x.png 2x`,
+                alt:"photo d'un langage de programmation",
+                date:"12/10/9992",
+                title:"Je suis le titre".repeat(2*Math.random()+1),
+                message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
+                link:"/"
+            }))
+            l.push(new Card({
+                src:`/assets/home/picture/Code.png`,
+                srcset:`/assets/home/picture/Code_2x.png 2x`,
+                alt:"photo d'un langage de programmation",
+                date:"12/10/9992",
+                title:"Je suis le titre".repeat(2*Math.random()+1),
+                message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
+                link:"/"
+            }))
+            l.push(new Card({
+                src:`/assets/home/picture/Computer.png`,
+                srcset:`/assets/home/picture/Computer_2x.png 2x`,
+                alt:"photo d'un langage de programmation",
+                date:"12/10/9992",
+                title:"Je suis le titre".repeat(2*Math.random()+1),
+                message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
+                link:"/"
+            }))
+            l.push(new Card({
+                src:`/assets/home/picture/Keyboard.png`,
+                srcset:`/assets/home/picture/Keyboard_2x.png 2x`,
+                alt:"photo d'un langage de programmation",
+                date:"12/10/9992",
+                title:"Je suis le titre".repeat(2*Math.random()+1).repeat(2*Math.random()+1),
+                message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
+                link:"/"
+            }))
+            l.push(new Card({
+                src:`/assets/home/picture/Code.png`,
+                srcset:`/assets/home/picture/Code_2x.png 2x`,
+                alt:"photo d'un langage de programmation",
+                date:"12/10/9992",
+                title:"Je suis le titre".repeat(2*Math.random()+1),
+                message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
+                link:"/"
+            }))
+            l.push(new Card({
+                src:`/assets/home/picture/Computer.png`,
+                srcset:`/assets/home/picture/Computer_2x.png 2x`,
+                alt:"photo d'un langage de programmation",
+                date:"12/10/9992",
+                title:"Je suis le titre".repeat(2*Math.random()+1),
+                message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
+                link:"/"
+            }))
+            list.push(l)
+        })();
     }
-    list.push(l)
-}
-list[0].forEach(e => {
-    document.getElementsByClassName('list_cards_actu')[0].appendChild(e.generateHtml())    
-});
+    // append cards
+    list[0].forEach(e => {
+        container_card_slider.appendChild(e.generateHtml())    
+    });
+    // generate btn
+    (()=>{
+        const c_cont = document.getElementsByClassName('control')[0]
+        let btn_left = document.createElement('button'),
+            btn_right = document.createElement('button');
+        btn_left.innerText = "<<"
+        btn_left.className = "move_slide left_slide"
+        btn_right.innerText = ">>"
+        btn_right.className = "move_slide right_slide"
+        // append
+        c_cont.appendChild(btn_left)
+            list.forEach((o,index) => {
+                let b = document.createElement('button')
+                b.innerText = index+1;
+                b.className = "move_slide dots"
+                c_cont.appendChild(b)
+            });
+        c_cont.appendChild(btn_right)
+    })();
+    // Transi
+    [...document.getElementsByClassName('move_slide')].forEach(ob=>{
+        console.log();
+        ob.addEventListener('click',()=>{
+            let chil = container_card_slider;
+            let i = chil.children;
+            [...i].forEach(m=>{
+                m.classList.add("transi");
+            })
+            setTimeout(()=>{
+                [...i].forEach(p => { p.remove()  });
+                opt.start = opt.start+1===opt.pages?0:opt.start+1;
+                list[opt.start].forEach(e => {
+                    container_card_slider.appendChild(e.generateHtml())    
+                });
+            },700)
+        })
+    })
 })();
 
-document.getElementsByClassName('left_slide')[0].addEventListener('click',()=>{
-    let chil = document.getElementsByClassName('list_cards_actu')[0]
-    let i = chil.children
-    for (let index = 0; index < i.length; index++) {
-        const element = i[index];
-        element.className = "card transi"
-        setTimeout(()=>{
-            element.remove() 
-        },1000)
-    }
-    setTimeout(()=>{
-        list[1].forEach(e => {
-            document.getElementsByClassName('list_cards_actu')[0].appendChild(e.generateHtml())    
-        });
-    },1000)
-})
