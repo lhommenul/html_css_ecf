@@ -60,17 +60,15 @@ class Card{
     }
 }
 
-
-
-
-
 // START SCRIPT
 let list = [];
 
 (()=>{
+// Je veux 4 pages donc 
 for (let index = 0; index < 4; index++) {
     let l = []
-    for (let compteur = 0; compteur < 3; compteur++) {
+    // PUSH une liste de 6 ELEMENTS
+    for (let compteur = 0; compteur < 2; compteur++) {
         l.push(new Card({
             src:`/assets/home/picture/Keyboard.png`,
             srcset:`/assets/home/picture/Keyboard_2x.png 2x`,
@@ -86,7 +84,7 @@ for (let index = 0; index < 4; index++) {
             alt:"photo d'un langage de programmation",
             date:"12/10/9992",
             title:"Je suis le titre",
-            message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô",
+            message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(Math.random*6),
             link:"/"
         }))
         l.push(new Card({
