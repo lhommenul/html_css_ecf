@@ -1,0 +1,14 @@
+main{
+    grid-column: 2;
+}
+.container_contain{
+    grid-column: 2;
+    margin: auto;
+    max-width: 60em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+    .para_message{
+        text-align: left;
+    }
