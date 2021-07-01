@@ -36,7 +36,8 @@ class Slider{
     init(){
         // define the number of pages
         let restant = this.cards.length%this.per_pages;
-        this.pages = ((this.cards.length-restant)/this.per_pages)+1;
+        this.pages = ((this.cards.length-restant)/this.per_pages);
+        if(this.pages === 0) this.pages = 1;
         let index_position = 0;
         // Je veux 4 pages donc 
         for (let index = 0; index < this.pages; index++) {
