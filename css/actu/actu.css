@@ -4,10 +4,6 @@ main{
 .container_cards{
     grid-column: 1/4;
 }
-    .list_cards_actu{
-        padding: 0.5em;
-        display: grid;
-    }
 
 /* ===== MEDIA SCREEN ===== */
 /*  320px */
@@ -24,17 +20,10 @@ main{
 }
 /*  768px */
 @media screen and (min-width:48rem) {
-    .list_cards_actu{
-        grid-template-columns: repeat(2,1fr);
-        /* gap: 2e  m; */
-    }
 }
 /*  1024px */
 @media screen and (min-width:64rem) {
-    .list_cards_actu{
-        grid-template-columns: repeat(3,1fr);
-        gap: 2em;
-    }
+
 }
 /*  1440px */
 @media screen and (min-width:90rem) {

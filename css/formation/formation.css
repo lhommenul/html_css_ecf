@@ -6,7 +6,7 @@
      text-align: center;
      padding: 1em 0em;
  }
-    .list_card{
+    .list_cards_actu{
         margin: 1em 0em;
         display: grid;
         row-gap: 1em;
@@ -30,19 +30,19 @@
 }
 /*  768px */
 @media screen and (min-width:48rem) {
-    .list_card{
+    .list_cards_actu{
         grid-template-columns: repeat(2,1fr);
     }
 }
 /*  1024px */
 @media screen and (min-width:64rem) {
-    .list_card{
+    .list_cards_actu{
         column-gap: 2em;
     }
 }
 /*  1440px */
 @media screen and (min-width:90rem) {
-    .list_card{
+    .list_cards_actu{
         grid-template-columns: repeat(2,1fr);
     }
 }

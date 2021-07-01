@@ -1,3 +1,5 @@
+import Slider from './slider.js'
+
 class Card{
     constructor(props){
         this.data = props;
@@ -60,79 +62,6 @@ class Card{
     }
 }
 
-class Slider{
-    constructor(props){
-        this.pages = 0;
-        this.per_pages = props.per_pages;
-        this.start = props.start;
-        this.cards = props.cards;
-        this.list = [];
-        this.container_card_slider = props.container;
-    }
-    init(){
-        // define the number of pages
-        let restant = this.cards.length%this.per_pages;
-        this.pages = ((this.cards.length-restant)/this.per_pages)+1;
-        let index_position = 0;
-        // Je veux 4 pages donc 
-        for (let index = 0; index < this.pages; index++) {
-            // PUSH une liste de 6 ELEMENTS
-            (()=>{
-                let l = [];
-                for (let index = 0; index < this.per_pages; index++) {
-                    const card = this.cards[index+index_position];
-                    if (card != undefined) l.push(card);
-                    // console.log(card.data.message.length);
-                }
-                this.list.push(l)
-            })();
-            index_position+=6;
-        }
-        // append cards
-        this.list[this.start].forEach(e => {
-            this.container_card_slider.appendChild(e.generateHtml())    
-        });
-        // generate btn
-        (()=>{
-            const c_cont = document.getElementsByClassName('control')[0]
-            let btn_left = document.createElement('button'),
-                btn_right = document.createElement('button');
-            btn_left.innerText = "<<"
-            btn_left.className = "move_slide left_slide"
-            btn_right.innerText = ">>"
-            btn_right.className = "move_slide right_slide"
-            // append
-            c_cont.appendChild(btn_left)
-                this.list.forEach((o,index) => {
-                    let b = document.createElement('button')
-                    b.innerText = index+1;
-                    b.className = "move_slide dots"
-                    c_cont.appendChild(b)
-                });
-            c_cont.appendChild(btn_right)
-        })();
-        // Transi
-        [...document.getElementsByClassName('move_slide')].forEach(ob=>{
-            ob.addEventListener('click',(btn_value)=>{
-                let chil = this.container_card_slider,
-                    posi = ob.classList.contains("dots"),
-                    i = chil.children;
-                [...i].forEach(m=>{
-                    m.classList.add("transi");
-                })
-                setTimeout(()=>{
-                    [...i].forEach(p => { p.remove() });
-                    this.start = this.start+1===this.pages?0:this.start+1;
-                    this.list[posi?Number(ob.innerText)-1:this.start].forEach(e => {
-                        this.container_card_slider.appendChild(e.generateHtml())    
-                    });
-                },700)
-            })
-        })        
-    }
-}
-
-
 new Slider({
     per_pages:6,
     start:0,
@@ -141,49 +70,49 @@ new Slider({
         src:`/assets/home/picture/Computer.png`,
         srcset:`/assets/home/picture/Computer_2x.png 2x`,
         alt:"photo d'un langage de programmation",
-        date:"12/10/9992",
-        title:"Je".repeat(2*Math.random()+1),
-        message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
+        date:"12/02/2020",
+        title:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr",
+        message:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …",
         link:"/"
     }),new Card({
         src:`/assets/home/picture/Keyboard.png`,
         srcset:`/assets/home/picture/Keyboard_2x.png 2x`,
         alt:"photo d'un langage de programmation",
-        date:"12/10/9992",
-        title:"Je".repeat(2*Math.random()+1),
-        message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
+        date:"12/02/2020",
+        title:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr",
+        message:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …",
         link:"/"
     }),new Card({
         src:`/assets/home/picture/Code.png`,
         srcset:`/assets/home/picture/Code_2x.png 2x`,
         alt:"photo d'un langage de programmation",
-        date:"12/10/9992",
-        title:"Je".repeat(2*Math.random()+1),
-        message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
+        date:"12/02/2020",
+        title:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr",
+        message:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …",
         link:"/"
     }),new Card({
         src:`/assets/home/picture/Computer.png`,
         srcset:`/assets/home/picture/Computer_2x.png 2x`,
         alt:"photo d'un langage de programmation",
-        date:"12/10/9992",
-        title:"Je".repeat(2*Math.random()+1),
-        message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
+        date:"12/02/2020",
+        title:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr",
+        message:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …",
         link:"/"
     }),new Card({
         src:`/assets/home/picture/Keyboard.png`,
         srcset:`/assets/home/picture/Keyboard_2x.png 2x`,
         alt:"photo d'un langage de programmation",
-        date:"12/10/9992",
-        title:"Je".repeat(2*Math.random()+1),
-        message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
+        date:"12/02/2020",
+        title:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr",
+        message:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …",
         link:"/"
     }),new Card({
         src:`/assets/home/picture/Code.png`,
         srcset:`/assets/home/picture/Code_2x.png 2x`,
         alt:"photo d'un langage de programmation",
-        date:"12/10/9992",
-        title:"Je".repeat(2*Math.random()+1),
-        message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
+        date:"12/02/2020",
+        title:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr",
+        message:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …",
         link:"/"
     }),new Card({
         src:`/assets/home/picture/Computer.png`,
