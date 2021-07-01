@@ -1,4 +1,4 @@
-import Slider from './slider.js'
+import {Slider} from '/js/slider.js'
 
 class Card{
     constructor(props){

@@ -1,4 +1,4 @@
-import Slider from '/js/slider.js'
+import {Slider} from '/js/slider.js'
 class Card{
     constructor(props){
         this.data = props;
@@ -180,11 +180,3 @@ new Slider({
         link:"/"
     })]
 }).init()
-
-
-{/* <li class="card">
-<img src="../assets/home/picture/Keyboard_bottom.png" src="../assets/home/picture/Keyboard_bottom_2x.png 2x" alt="photo d'un clavier d'ordinateur">
-<h3 class="card_space">Module JavaScript</h3>
-<p class="card_space">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, labore similique! Quo sequi, tempore repudiandae officiis assumenda delectus, eveniet nisi fugit perspiciatis esse vitae adipisci, facere quam odit. Magni, quibusdam.</p>
-<a href="" class="link_card_next">Lire la suite <img class="icon_link_card" src="../assets/home/icon/right_circle.svg" alt="flèche vers la droite"></a>
-</li> */}
