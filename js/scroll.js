@@ -72,18 +72,21 @@ class Slider{
     init(){
         // define the number of pages
         let restant = this.cards.length%this.per_pages;
-        this.pages = ((this.cards.length-restant)/this.per_pages)+1
+        this.pages = ((this.cards.length-restant)/this.per_pages)+1;
+        let index_position = 0;
         // Je veux 4 pages donc 
         for (let index = 0; index < this.pages; index++) {
             // PUSH une liste de 6 ELEMENTS
             (()=>{
-                let l = []
+                let l = [];
                 for (let index = 0; index < this.per_pages; index++) {
-                    const card = this.cards[index];
+                    const card = this.cards[index+index_position];
                     if (card != undefined) l.push(card);
+                    // console.log(card.data.message.length);
                 }
                 this.list.push(l)
             })();
+            index_position+=6;
         }
         // append cards
         this.list[this.start].forEach(e => {
@@ -110,17 +113,17 @@ class Slider{
         })();
         // Transi
         [...document.getElementsByClassName('move_slide')].forEach(ob=>{
-            console.log();
-            ob.addEventListener('click',()=>{
-                let chil = this.container_card_slider;
-                let i = chil.children;
+            ob.addEventListener('click',(btn_value)=>{
+                let chil = this.container_card_slider,
+                    posi = ob.classList.contains("dots"),
+                    i = chil.children;
                 [...i].forEach(m=>{
                     m.classList.add("transi");
                 })
                 setTimeout(()=>{
-                    [...i].forEach(p => { p.remove()  });
+                    [...i].forEach(p => { p.remove() });
                     this.start = this.start+1===this.pages?0:this.start+1;
-                    this.list[this.start].forEach(e => {
+                    this.list[posi?Number(ob.innerText)-1:this.start].forEach(e => {
                         this.container_card_slider.appendChild(e.generateHtml())    
                     });
                 },700)
@@ -137,6 +140,118 @@ new Slider({
     cards:[new Card({
         src:`/assets/home/picture/Computer.png`,
         srcset:`/assets/home/picture/Computer_2x.png 2x`,
+        alt:"photo d'un langage de programmation",
+        date:"12/10/9992",
+        title:"Je".repeat(2*Math.random()+1),
+        message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
+        link:"/"
+    }),new Card({
+        src:`/assets/home/picture/Keyboard.png`,
+        srcset:`/assets/home/picture/Keyboard_2x.png 2x`,
+        alt:"photo d'un langage de programmation",
+        date:"12/10/9992",
+        title:"Je".repeat(2*Math.random()+1),
+        message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
+        link:"/"
+    }),new Card({
+        src:`/assets/home/picture/Code.png`,
+        srcset:`/assets/home/picture/Code_2x.png 2x`,
+        alt:"photo d'un langage de programmation",
+        date:"12/10/9992",
+        title:"Je".repeat(2*Math.random()+1),
+        message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
+        link:"/"
+    }),new Card({
+        src:`/assets/home/picture/Computer.png`,
+        srcset:`/assets/home/picture/Computer_2x.png 2x`,
+        alt:"photo d'un langage de programmation",
+        date:"12/10/9992",
+        title:"Je".repeat(2*Math.random()+1),
+        message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
+        link:"/"
+    }),new Card({
+        src:`/assets/home/picture/Keyboard.png`,
+        srcset:`/assets/home/picture/Keyboard_2x.png 2x`,
+        alt:"photo d'un langage de programmation",
+        date:"12/10/9992",
+        title:"Je".repeat(2*Math.random()+1),
+        message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
+        link:"/"
+    }),new Card({
+        src:`/assets/home/picture/Code.png`,
+        srcset:`/assets/home/picture/Code_2x.png 2x`,
+        alt:"photo d'un langage de programmation",
+        date:"12/10/9992",
+        title:"Je".repeat(2*Math.random()+1),
+        message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
+        link:"/"
+    }),new Card({
+        src:`/assets/home/picture/Computer.png`,
+        srcset:`/assets/home/picture/Computer_2x.png 2x`,
+        alt:"photo d'un langage de programmation",
+        date:"12/10/9992",
+        title:"Je suis le jsqpo jdpojksq podksqo k".repeat(2*Math.random()+1),
+        message:"lordekzpô".repeat(6*Math.random()+1),
+        link:"/"
+    }),new Card({
+        src:`/assets/home/picture/Keyboard.png`,
+        srcset:`/assets/home/picture/Keyboard_2x.png 2x`,
+        alt:"photo d'un langage de programmation",
+        date:"12/10/9992",
+        title:"Je suis le jsqpo jdpojksq podksqo k".repeat(2*Math.random()+1),
+        message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
+        link:"/"
+    }),new Card({
+        src:`/assets/home/picture/Code.png`,
+        srcset:`/assets/home/picture/Code_2x.png 2x`,
+        alt:"photo d'un langage de programmation",
+        date:"12/10/9992",
+        title:"Je suis le jsqpo jdpojksq podksqo k".repeat(2*Math.random()+1),
+        message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
+        link:"/"
+    }),new Card({
+        src:`/assets/home/picture/Computer.png`,
+        srcset:`/assets/home/picture/Computer_2x.png 2x`,
+        alt:"photo d'un langage de programmation",
+        date:"12/10/9992",
+        title:"Je suis le jsqpo jdpojksq podksqo k".repeat(2*Math.random()+1),
+        message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
+        link:"/"
+    }),new Card({
+        src:`/assets/home/picture/Keyboard.png`,
+        srcset:`/assets/home/picture/Keyboard_2x.png 2x`,
+        alt:"photo d'un langage de programmation",
+        date:"12/10/9992",
+        title:"Je suis le jsqpo jdpojksq podksqo k".repeat(2*Math.random()+1),
+        message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
+        link:"/"
+    }),new Card({
+        src:`/assets/home/picture/Code.png`,
+        srcset:`/assets/home/picture/Code_2x.png 2x`,
+        alt:"photo d'un langage de programmation",
+        date:"12/10/9992",
+        title:"Je suis le jsqpo jdpojksq podksqo k".repeat(2*Math.random()+1),
+        message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
+        link:"/"
+    }),new Card({
+        src:`/assets/home/picture/Computer.png`,
+        srcset:`/assets/home/picture/Computer_2x.png 2x`,
+        alt:"photo d'un langage de programmation",
+        date:"12/10/9992",
+        title:"Je suis le titre".repeat(2*Math.random()+1),
+        message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
+        link:"/"
+    }),new Card({
+        src:`/assets/home/picture/Keyboard.png`,
+        srcset:`/assets/home/picture/Keyboard_2x.png 2x`,
+        alt:"photo d'un langage de programmation",
+        date:"12/10/9992",
+        title:"Je suis le titre".repeat(2*Math.random()+1),
+        message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
+        link:"/"
+    }),new Card({
+        src:`/assets/home/picture/Code.png`,
+        srcset:`/assets/home/picture/Code_2x.png 2x`,
         alt:"photo d'un langage de programmation",
         date:"12/10/9992",
         title:"Je suis le titre".repeat(2*Math.random()+1),
