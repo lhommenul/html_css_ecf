@@ -1,0 +1,34 @@
+main{
+    grid-column: 1/-1;
+}
+    .container_contain{
+        grid-column: 1/-1;
+        grid-template-rows: 25em auto;
+        text-align: center;
+    }
+        .bg_img{
+            width: 100%;
+            height: 100%;
+            object-fit:cover;
+            grid-row: 1;
+            grid-column: 1/-1;
+        }
+        .title_bg{
+            place-self: center;
+            color: white;
+            grid-row: 1;
+            grid-column: 2;
+            font-weight: bold;
+            font-size: 3em;
+        }
+        .text_bg{
+            font-size: 1.5em;
+            margin: 2.5em 0em;
+            text-align: left;
+            font-family: var(--default_font_title);
+            font-weight: 600;
+            place-self: center;
+            max-width: 52.5em;
+            grid-row: 2;
+            grid-column: 2;
+        }
