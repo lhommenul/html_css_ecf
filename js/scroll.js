@@ -60,117 +60,87 @@ class Card{
     }
 }
 
-// START SCRIPT
-let list = [];
-
-(()=>{
-    let opt = {
-        pages:4,
-        start:0
-    }, container_card_slider = document.getElementsByClassName('list_cards_actu')[0];
-
-    // Je veux 4 pages donc 
-    for (let index = 0; index < opt.pages; index++) {
-        // PUSH une liste de 6 ELEMENTS
-        (()=>{
-            let l = []
-            l.push(new Card({
-                src:`/assets/home/picture/Keyboard.png`,
-                srcset:`/assets/home/picture/Keyboard_2x.png 2x`,
-                alt:"photo d'un langage de programmation",
-                date:"12/10/9992",
-                title:"Je suis le titre".repeat(2*Math.random()+1),
-                message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
-                link:"/"
-            }))
-            l.push(new Card({
-                src:`/assets/home/picture/Code.png`,
-                srcset:`/assets/home/picture/Code_2x.png 2x`,
-                alt:"photo d'un langage de programmation",
-                date:"12/10/9992",
-                title:"Je suis le titre".repeat(2*Math.random()+1),
-                message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
-                link:"/"
-            }))
-            l.push(new Card({
-                src:`/assets/home/picture/Computer.png`,
-                srcset:`/assets/home/picture/Computer_2x.png 2x`,
-                alt:"photo d'un langage de programmation",
-                date:"12/10/9992",
-                title:"Je suis le titre".repeat(2*Math.random()+1),
-                message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
-                link:"/"
-            }))
-            l.push(new Card({
-                src:`/assets/home/picture/Keyboard.png`,
-                srcset:`/assets/home/picture/Keyboard_2x.png 2x`,
-                alt:"photo d'un langage de programmation",
-                date:"12/10/9992",
-                title:"Je suis le titre".repeat(2*Math.random()+1).repeat(2*Math.random()+1),
-                message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
-                link:"/"
-            }))
-            l.push(new Card({
-                src:`/assets/home/picture/Code.png`,
-                srcset:`/assets/home/picture/Code_2x.png 2x`,
-                alt:"photo d'un langage de programmation",
-                date:"12/10/9992",
-                title:"Je suis le titre".repeat(2*Math.random()+1),
-                message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
-                link:"/"
-            }))
-            l.push(new Card({
-                src:`/assets/home/picture/Computer.png`,
-                srcset:`/assets/home/picture/Computer_2x.png 2x`,
-                alt:"photo d'un langage de programmation",
-                date:"12/10/9992",
-                title:"Je suis le titre".repeat(2*Math.random()+1),
-                message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
-                link:"/"
-            }))
-            list.push(l)
-        })();
+class Slider{
+    constructor(props){
+        this.pages = 0;
+        this.per_pages = props.per_pages;
+        this.start = props.start;
+        this.cards = props.cards;
+        this.list = [];
+        this.container_card_slider = props.container;
     }
-    // append cards
-    list[0].forEach(e => {
-        container_card_slider.appendChild(e.generateHtml())    
-    });
-    // generate btn
-    (()=>{
-        const c_cont = document.getElementsByClassName('control')[0]
-        let btn_left = document.createElement('button'),
-            btn_right = document.createElement('button');
-        btn_left.innerText = "<<"
-        btn_left.className = "move_slide left_slide"
-        btn_right.innerText = ">>"
-        btn_right.className = "move_slide right_slide"
-        // append
-        c_cont.appendChild(btn_left)
-            list.forEach((o,index) => {
-                let b = document.createElement('button')
-                b.innerText = index+1;
-                b.className = "move_slide dots"
-                c_cont.appendChild(b)
-            });
-        c_cont.appendChild(btn_right)
-    })();
-    // Transi
-    [...document.getElementsByClassName('move_slide')].forEach(ob=>{
-        console.log();
-        ob.addEventListener('click',()=>{
-            let chil = container_card_slider;
-            let i = chil.children;
-            [...i].forEach(m=>{
-                m.classList.add("transi");
-            })
-            setTimeout(()=>{
-                [...i].forEach(p => { p.remove()  });
-                opt.start = opt.start+1===opt.pages?0:opt.start+1;
-                list[opt.start].forEach(e => {
-                    container_card_slider.appendChild(e.generateHtml())    
+    init(){
+        // define the number of pages
+        let restant = this.cards.length%this.per_pages;
+        this.pages = ((this.cards.length-restant)/this.per_pages)+1
+        // Je veux 4 pages donc 
+        for (let index = 0; index < this.pages; index++) {
+            // PUSH une liste de 6 ELEMENTS
+            (()=>{
+                let l = []
+                for (let index = 0; index < this.per_pages; index++) {
+                    const card = this.cards[index];
+                    if (card != undefined) l.push(card);
+                }
+                this.list.push(l)
+            })();
+        }
+        // append cards
+        this.list[this.start].forEach(e => {
+            this.container_card_slider.appendChild(e.generateHtml())    
+        });
+        // generate btn
+        (()=>{
+            const c_cont = document.getElementsByClassName('control')[0]
+            let btn_left = document.createElement('button'),
+                btn_right = document.createElement('button');
+            btn_left.innerText = "<<"
+            btn_left.className = "move_slide left_slide"
+            btn_right.innerText = ">>"
+            btn_right.className = "move_slide right_slide"
+            // append
+            c_cont.appendChild(btn_left)
+                this.list.forEach((o,index) => {
+                    let b = document.createElement('button')
+                    b.innerText = index+1;
+                    b.className = "move_slide dots"
+                    c_cont.appendChild(b)
                 });
-            },700)
-        })
-    })
-})();
+            c_cont.appendChild(btn_right)
+        })();
+        // Transi
+        [...document.getElementsByClassName('move_slide')].forEach(ob=>{
+            console.log();
+            ob.addEventListener('click',()=>{
+                let chil = this.container_card_slider;
+                let i = chil.children;
+                [...i].forEach(m=>{
+                    m.classList.add("transi");
+                })
+                setTimeout(()=>{
+                    [...i].forEach(p => { p.remove()  });
+                    this.start = this.start+1===this.pages?0:this.start+1;
+                    this.list[this.start].forEach(e => {
+                        this.container_card_slider.appendChild(e.generateHtml())    
+                    });
+                },700)
+            })
+        })        
+    }
+}
 
+
+new Slider({
+    per_pages:6,
+    start:0,
+    container : document.getElementsByClassName('list_cards_actu')[0],
+    cards:[new Card({
+        src:`/assets/home/picture/Computer.png`,
+        srcset:`/assets/home/picture/Computer_2x.png 2x`,
+        alt:"photo d'un langage de programmation",
+        date:"12/10/9992",
+        title:"Je suis le titre".repeat(2*Math.random()+1),
+        message:"lorem lorem dez dezpok dpeoz jdpoejkz podkez odkezo kepodk dokz podekzpô".repeat(6*Math.random()+1),
+        link:"/"
+    })]
+}).init()
