@@ -1,50 +1,131 @@
 main{
     grid-column: 2;
 }
-label{
-    display: flex;
-    flex-direction: column;
-}
-input,textarea{
-    border-width: 0em 0em 0.2em 0em;
-    border-color: var(--bg_light_grey);
-}
-input::placeholder,textarea::placeholder{
-    color: var(--bg_grey);;
-}
-
-    .form_contact{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 4fr auto;
-    }
-        .label_inpna{
-            grid-row: 1;
-            grid-column: 1;
-        }
-        .label_inpem{
-            grid-row: 1;
-            grid-column: 2;
-        }
-        .label_inpaream{
-            height: 100%;
-            width: 100%;
-            grid-row: 2;
-            grid-column: 1/3;
-        }
-            #input_name{
-            }
-            #input_email{
-
-            }
-            #text_area_message{
+    .container_section{
         
-            }
-        .link_card_next{
-            padding: 1em 1em 1em 2em;
-            grid-row: 3;
-            grid-column: 2;
-            justify-self: center;
-            width: auto;
-            cursor: pointer;
+        padding: 0em;
+    }
+        .title_form{
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+            text-align: center;
         }
+        label{
+            display: flex;
+            flex-direction: column;
+        }
+        input,textarea{
+            border-width: 0em 0em 0.2em 0em;
+            border-color: var(--bg_light_grey);
+        }
+        input::placeholder,textarea::placeholder{
+            font-style: oblique;
+            color: var(--bg_grey);;
+        }
+
+            .form_contact{
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 4fr auto;
+                margin-bottom: 2.5em;
+            }
+                input,textarea{
+                    margin-top: 1.25em;
+                }
+                .label_inpna{
+                    grid-row: 1;
+                    grid-column: 1;
+                }
+                .label_inpem{
+                    grid-row: 2;
+                    grid-column: 1;
+                }
+                .label_inpaream{
+                    margin-top: 2.75em;
+                    margin-bottom: 1.25em;
+                    height: 100%;
+                    width: 100%;
+                    grid-row: 3;
+                }
+                    #input_name{
+                    }
+                    #input_email{
+
+                    }
+                    #text_area_message{
+                        height: 12.5em;
+                    }
+                .link_card_next{
+                    grid-column: 1;
+                    grid-row: 4;
+                }
+
+
+/*  320px */
+@media screen and (min-width:20rem) {
+
+}
+/*  375px */
+@media screen and (min-width:23.43rem) {
+
+}
+/*  425px */
+@media screen and (min-width:26.56rem) {
+
+}
+/*  768px */
+@media screen and (min-width:48rem) {
+    .container_section{
+        
+        padding: 0em 6.9em;
+    }
+}
+/*  1024px */
+@media screen and (min-width:64rem) {
+.form_contact{
+    margin-top: 8.8em;
+    margin-bottom: 2.5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 4fr auto;
+    column-gap: 2em;
+}
+    .label_inpna{
+        grid-row: 1;
+        grid-column: 1;
+    }
+    .label_inpem{
+        grid-row: 1;
+        grid-column: 2;
+    }
+    .label_inpaream{
+        margin-top: 2.75em;
+        margin-bottom: 1.25em;
+        height: 100%;
+        width: 100%;
+        grid-row: 2;
+        grid-column: 1/-1;
+    }
+    .link_card_next{
+        padding: 0.5em 0em 0.5em 1.25em;
+        grid-row: 3;
+        font-size: 1.5em;
+        font-family: var(--default_font_std);
+        font-weight: 600;
+        grid-column: 2;
+        justify-self: right;
+        width: auto;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.25em;
+    } 
+}
+/*  1440px */
+@media screen and (min-width:90rem) {
+
+}
+/*  2560px */
+@media screen and (min-width:160rem) {
+
+}
