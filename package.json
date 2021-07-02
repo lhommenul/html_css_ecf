@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/lhommenul/html_css_ecf#readme",
   "devDependencies": {
+    "@lhommenul/slider": "^1.0.4",
     "handlebars": "^4.7.7"
   }
 }
