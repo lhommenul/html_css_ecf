@@ -1,4 +1,4 @@
-import {Slider} from '/js/slider.js'
+
 class Card{
     constructor(props){
         this.data = props;
@@ -52,131 +52,28 @@ new Slider({
     per_pages:6,
     start:0,
     container : document.getElementsByClassName('list_cards_actu')[0],
-    cards:[new Card({
-        src:`/assets/home/picture/Keyboard_bottom.png`,
-        srcset:`/assets/home/picture/Keyboard_bottom_2x.png 2x`,
-        alt:"photo d'un langage de programmation",
-        title:"Module JavaScript",
-        message:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …",
-        link:"/views/module_formation.html"
-    }),new Card({
-        src:`/assets/home/picture/Code_bottom.png`,
-        srcset:`/assets/home/picture/Code_bottom_2x.png 2x`,
-        alt:"photo d'un langage de programmation",
-        title:"Module HTML/CSS",
-        message:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …",
-        link:"/views/module_formation.html"
-    }),new Card({
-        src:`/assets/home/picture/Code_bottom.png`,
-        srcset:`/assets/home/picture/Code_bottom_2x.png 2x`,
-        alt:"photo d'un langage de programmation",
-        title:"Module HTML/CSS",
-        message:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …",
-        link:"/views/module_formation.html"
-    }),new Card({
-        src:`/assets/home/picture/Keyboard_bottom.png`,
-        srcset:`/assets/home/picture/Keyboard_bottom_2x.png 2x`,
-        alt:"photo d'un langage de programmation",
-        title:"Module JavaScript",
-        message:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …",
-        link:"/views/module_formation.html"
-    }),new Card({
-        src:`/assets/home/picture/Code_bottom.png`,
-        srcset:`/assets/home/picture/Code_bottom_2x.png 2x`,
-        alt:"photo d'un langage de programmation",
-        title:"Module HTML/CSS",
-        message:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …",
-        link:"/views/module_formation.html"
-    }),new Card({
-        src:`/assets/home/picture/Code_bottom.png`,
-        srcset:`/assets/home/picture/Code_bottom_2x.png 2x`,
-        alt:"photo d'un langage de programmation",
-        title:"Module HTML/CSS",
-        message:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …",
-        link:"/views/module_formation.html"
-    }),new Card({
-        src:`/assets/home/picture/Keyboard_bottom.png`,
-        srcset:`/assets/home/picture/Keyboard_bottom_2x.png 2x`,
-        alt:"photo d'un langage de programmation",
-        title:"Module JavaScript",
-        message:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …",
-        link:"/views/module_formation.html"
-    }),new Card({
-        src:`/assets/home/picture/Code_bottom.png`,
-        srcset:`/assets/home/picture/Code_bottom_2x.png 2x`,
-        alt:"photo d'un langage de programmation",
-        title:"Module HTML/CSS",
-        message:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …",
-        link:"/views/module_formation.html"
-    }),new Card({
-        src:`/assets/home/picture/Code_bottom.png`,
-        srcset:`/assets/home/picture/Code_bottom_2x.png 2x`,
-        alt:"photo d'un langage de programmation",
-        title:"Module HTML/CSS",
-        message:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …",
-        link:"/views/module_formation.html"
-    }),new Card({
-        src:`/assets/home/picture/Keyboard_bottom.png`,
-        srcset:`/assets/home/picture/Keyboard_bottom_2x.png 2x`,
-        alt:"photo d'un langage de programmation",
-        title:"Module JavaScript",
-        message:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …",
-        link:"/views/module_formation.html"
-    }),new Card({
-        src:`/assets/home/picture/Code_bottom.png`,
-        srcset:`/assets/home/picture/Code_bottom_2x.png 2x`,
-        alt:"photo d'un langage de programmation",
-        title:"Module HTML/CSS",
-        message:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …",
-        link:"/views/module_formation.html"
-    }),new Card({
-        src:`/assets/home/picture/Code_bottom.png`,
-        srcset:`/assets/home/picture/Code_bottom_2x.png 2x`,
-        alt:"photo d'un langage de programmation",
-        title:"Module HTML/CSS",
-        message:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …",
-        link:"/views/module_formation.html"
-    }),new Card({
-        src:`/assets/home/picture/Keyboard_bottom.png`,
-        srcset:`/assets/home/picture/Keyboard_bottom_2x.png 2x`,
-        alt:"photo d'un langage de programmation",
-        title:"Module JavaScript",
-        message:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …",
-        link:"/views/module_formation.html"
-    }),new Card({
-        src:`/assets/home/picture/Code_bottom.png`,
-        srcset:`/assets/home/picture/Code_bottom_2x.png 2x`,
-        alt:"photo d'un langage de programmation",
-        title:"Module HTML/CSS",
-        message:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …",
-        link:"/views/module_formation.html"
-    }),new Card({
-        src:`/assets/home/picture/Code_bottom.png`,
-        srcset:`/assets/home/picture/Code_bottom_2x.png 2x`,
-        alt:"photo d'un langage de programmation",
-        title:"Module HTML/CSS",
-        message:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …",
-        link:"/views/module_formation.html"
-    }),new Card({
-        src:`/assets/home/picture/Code_bottom.png`,
-        srcset:`/assets/home/picture/Code_bottom_2x.png 2x`,
-        alt:"photo d'un langage de programmation",
-        title:"Module JavaScript",
-        message:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …",
-        link:"/views/module_formation.html"
-    }),new Card({
-        src:`/assets/home/picture/Code_bottom.png`,
-        srcset:`/assets/home/picture/Code_bottom_2x.png 2x`,
-        alt:"photo d'un langage de programmation",
-        title:"Module HTML/CSS",
-        message:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …",
-        link:"/views/module_formation.html"
-    }),new Card({
-        src:`/assets/home/picture/Code_bottom.png`,
-        srcset:`/assets/home/picture/Code_bottom_2x.png 2x`,
-        alt:"photo d'un langage de programmation",
-        title:"Module HTML/CSS",
-        message:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …",
-        link:"/views/module_formation.html"
-    })]
+    cards:generateCol(10)
 }).init()
+
+
+function generateCol(nb_elements) {
+    let i = []
+    for (let index = 0; index < nb_elements; index++) {
+        i.push(new Card({
+            src:`/assets/home/picture/Keyboard_bottom.png`,
+            srcset:`/assets/home/picture/Keyboard_bottom_2x.png 2x`,
+            alt:"photo d'un langage de programmation",
+            title:"Module JavaScript",
+            message:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …",
+            link:"/views/module_formation.html"
+        }).generateHtml(),new Card({
+            src:`/assets/home/picture/Code_bottom.png`,
+            srcset:`/assets/home/picture/Code_bottom_2x.png 2x`,
+            alt:"photo d'un langage de programmation",
+            title:"Module HTML/CSS",
+            message:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …",
+            link:"/views/module_formation.html"
+        }).generateHtml())
+    }
+    return i
+}
