@@ -2,16 +2,35 @@ main{
     grid-column: 2;
 }
     .container_contain{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center²;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3,auto);
+        place-items: center;
+        margin-top: 2.5em;
+        margin-bottom: 2.5em;
     }
+        .title_profil{
+            font-size: 3em;
+            font-family: var(--default_font_title);
+            font-weight: 700;
+        }
         .list_habits{
             display: grid;
             grid-template-columns: repeat(4,1fr);
-            gap: 2em;
+            gap: 2.5em;
         }
             .large{
                 grid-column: 1/-1;
             }
+            .sub_title{
+                font-family: var(--default_font_title);
+                font-weight:600;
+                font-size: 1.5em;
+            }
+            .content_msg{
+                font-size: 1.25em;
+                font-family: var(--default_font_std);
+            }
+        .img_profil,.title_profil{
+            margin-bottom: 2.5rem;
+        }

@@ -32,7 +32,7 @@ button{border: none;padding: 1em;}
         /* max-width: 79.75em; */
         min-width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: space-between;
     }
@@ -59,6 +59,7 @@ header{
     background-color: var(--bg_orange);
 }
     .header_title_site{
+        text-decoration: none;
         font-size: 3em;
         font-weight: bold;
         color: var(--bg_white);
@@ -68,10 +69,14 @@ header{
     }
         .header_list_items{
             /* padding: 1em 1em; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
             .header_nav_list{
-                display: none;
-                flex-direction: row;
+                display: flex;
+                flex-direction: column;
             }
                 .header_nav_link{
                     font-size: 1.25em;
@@ -87,13 +92,14 @@ header{
                     color: var(--bg_orange);
                     background-color: var(--bg_white);
                 }
-/*  1440px */
-@media screen and (min-width:90rem) {
-    .btn_menu_header{
-        display: none;
-    }
+/* 1000PX */
+@media screen and (min-width:62.5rem) {
     .header_nav_list{
         display: flex;
+        flex-direction: row;
+    }
+    .to_center{
+        flex-direction: row;
     }
 }
 /* ======== FOOTER ======== */
@@ -218,6 +224,16 @@ footer{
                 justify-content: center;
                 color: var(--bg_white);
             }
+            .link_card_next:hover,.link_card_next:focus{
+                animation: pulse 1s infinite;
+            }
+            @keyframes pulse{
+                from{
+                    
+                }to{
+                    color: black;
+                }
+            }
                 .icon_link_card{
                     display: block;
                     margin: 0px 1em;
@@ -301,3 +317,4 @@ footer{
         gap: 2em;
     }
 }
+
