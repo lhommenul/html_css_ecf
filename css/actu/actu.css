@@ -4,7 +4,9 @@ main{
 .container_cards{
     grid-column: 1/4;
 }
-
+.title_actu{
+    text-align: center;
+}
 /* ===== MEDIA SCREEN ===== */
 /*  320px */
 @media screen and (min-width:20rem) {
