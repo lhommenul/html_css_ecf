@@ -46,6 +46,7 @@ button{border: none;padding: 1em;}
     .to_column{
         flex-direction: column;
     }
+
 @media screen and (min-width:90rem) {
     .to_center{
         place-self: center;
@@ -303,23 +304,6 @@ footer{
         transform: rotateY(0deg);
     }
 }
-@media screen and (min-width:48rem) {
-    .card{
-        text-align: left;
-        place-self: center;
-        align-items: flex-start;
-        max-width: 70%;
-    }
-}
-
-@media screen and (min-width:64rem) {
-    .card{
-
-        max-width: 100%;
-        height: 100%;
-    }
-}
-
 
 /* CARD */
 .list_cards_actu{
@@ -332,6 +316,12 @@ footer{
         grid-template-columns: repeat(2,1fr);
         /* gap: 2e  m; */
     }
+    .card{
+        text-align: left;
+        place-self: center;
+        align-items: flex-start;
+        max-width: 70%;
+    }
 }
 /*  1024px */
 @media screen and (min-width:64rem) {
@@ -339,5 +329,9 @@ footer{
         grid-template-columns: repeat(3,1fr);
         gap: 2em;
     }
-}
+    .card{
 
+        max-width: 100%;
+        height: 100%;
+    }
+}

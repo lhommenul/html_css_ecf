@@ -39,6 +39,8 @@ main{
         }
             .bubble_title{
                 margin: 0.5em;
+                margin-left: 0px;
+                margin-right: 0px;
             }
             .bubble_btn_redirect{
                 text-decoration: none;
@@ -116,3 +118,11 @@ main{
         grid-template-rows: 1fr 1fr;
         column-gap:2em; 
     }
+
+/*  425px */
+@media screen and (min-width:26.56rem) {
+    .bubble_title{
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+}
