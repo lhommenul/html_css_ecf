@@ -4,7 +4,6 @@
  .section_formation{
      grid-column: 1/4;
      text-align: center;
-     padding: 1em 0em;
  }
     .list_cards_actu{
         margin: 1em 0em;

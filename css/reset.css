@@ -39,6 +39,9 @@ button{border: none;padding: 1em;}
 /* HAMBURGER */
 #hamburger_btn{
     display: flex;
+    font-family: var(--default_font_title);
+    background-color: whitesmoke;
+    border-radius: 0.2rem;
 }
     .menu_open{
         display: flex;   
@@ -258,8 +261,11 @@ footer{
                 justify-content: center;
                 color: var(--bg_white);
             }
-            .link_card_next:hover,.link_card_next:focus{
+            .link_card_next:hover,.link_card_next:focus,.item_list_adress>a:focus,.item_list_adress>a:hover,.list_mention_link:focus,.item_list_adress:hover{
                 animation: pulse 1s infinite;
+            }
+            .img_footer_link:focus,.img_footer_link:hover{
+
             }
             @keyframes pulse{
                 from{
