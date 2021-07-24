@@ -36,6 +36,13 @@ button{border: none;padding: 1em;}
         align-items: center;
         justify-content: space-between;
     }
+/* HAMBURGER */
+#hamburger_btn{
+    display: flex;
+}
+    .menu_open{
+        display: flex;   
+    }
 @media screen and (min-width:90rem) {
     .to_center{
         place-self: center;
@@ -64,9 +71,6 @@ header{
         font-weight: bold;
         color: var(--bg_white);
     }
-    .header_nav{
-
-    }
         .header_list_items{
             /* padding: 1em 1em; */
             display: flex;
@@ -74,6 +78,13 @@ header{
             align-items: center;
             text-align: center;
         }
+            .header_nav{
+                display: none;
+            }
+                .header_nav_open{
+                    display: flex;
+                    flex-direction: column;
+                }
             .header_nav_list{
                 display: flex;
                 flex-direction: column;
@@ -153,6 +164,12 @@ footer{
             
 /*  1024px */
 @media screen and (min-width:64rem){
+    #hamburger_btn{
+        display: none;
+    }
+    .header_nav{
+        display: flex;
+    }
     .content_footer{
         display: grid;
         grid-template-columns: repeat(2,1fr);
