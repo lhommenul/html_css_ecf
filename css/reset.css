@@ -113,9 +113,6 @@ header{
         display: flex;
         flex-direction: row;
     }
-    .to_center{
-        flex-direction: row;
-    }
 }
 /* ======== FOOTER ======== */
 footer{
@@ -186,6 +183,9 @@ footer{
 @media screen and (min-width:75rem){
     #hamburger_btn{
         display: none;
+    }
+    .to_center{
+        flex-direction: row;
     }
     .header_nav{
         display: flex;
