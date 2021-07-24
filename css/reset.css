@@ -10,8 +10,6 @@ body{padding:0px; margin:0px;--invisible:rgba(0,0,0,0);}
 button{border: none;padding: 1em;}
 /* ================================================================= */
 
-/* CHANGE CDN FONTS TO LOCAL !!!!!!!!!!!! */
-
 :root{
     --bg_white:#FFFFFF;
     --bg_orange:#FD7E37;
@@ -49,24 +47,6 @@ button{border: none;padding: 1em;}
     .to_column{
         flex-direction: column;
     }
-
-@media screen and (min-width:90rem) {
-    .to_center{
-        place-self: center;
-    }
-}
-/* 1800px */
-@media screen and (min-width:112.5em){
-    .container{
-        grid-template-columns: auto minmax(20em,90em) auto;
-    }
-}
-/* 1920px */
-@media screen and (min-width: 120em) {
-    .container{
-        grid-template-columns: auto minmax(auto,1276px) auto;
-    }
-}
 /* ======== HEADER ======== */
 header{
     grid-column: 1/4;
@@ -110,13 +90,6 @@ header{
                     color: var(--bg_orange);
                     background-color: var(--bg_white);
                 }
-/* 1000PX */
-@media screen and (min-width:62.5rem) {
-    .header_nav_list{
-        display: flex;
-        flex-direction: row;
-    }
-}
 .mg_tb{
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
@@ -174,47 +147,6 @@ footer{
             .item_list_social{
                 place-self: center;
             }
-
-/*  1024px */
-@media screen and (min-width:64rem){
-    .content_footer{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-    }
-        .container_list_adress{
-            grid-row: 1/3;
-        }
-            .list_adress{
-                text-align: left;
-            }
-        .list_social{
-            grid-column: 2;
-        }
-}
-
-/* 1200px */
-@media screen and (min-width:75rem){
-    #hamburger_btn{
-        display: none;
-    }
-    .to_center{
-        flex-direction: row;
-    }
-    .header_nav{
-        display: flex;
-    }
-}
-/*  1440px */
-@media screen and (min-width:90rem) {
-    .content_footer{
-        grid-column: 2;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-}
-
-
 /* 
 687 
     260  37.84%
@@ -326,6 +258,9 @@ footer{
     padding: 0.5em;
     display: grid;
 }
+
+
+
 /*  768px */
 @media screen and (min-width:48rem) {
     .list_cards_actu{
@@ -339,6 +274,13 @@ footer{
         max-width: 70%;
     }
 }
+/* 1000px */
+@media screen and (min-width:62.5rem) {
+    .header_nav_list{
+        display: flex;
+        flex-direction: row;
+    }
+}
 /*  1024px */
 @media screen and (min-width:64rem) {
     .list_cards_actu{
@@ -349,5 +291,54 @@ footer{
 
         max-width: 100%;
         height: 100%;
+    }
+    .content_footer{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+        .container_list_adress{
+            grid-row: 1/3;
+        }
+            .list_adress{
+                text-align: left;
+            }
+        .list_social{
+            grid-column: 2;
+        }
+}
+/*  1440px */
+@media screen and (min-width:90rem) {
+    .to_center{
+        place-self: center;
+    }
+    .content_footer{
+        grid-column: 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+/* 1200px */
+@media screen and (min-width:75rem){
+    #hamburger_btn{
+        display: none;
+    }
+    .to_center{
+        flex-direction: row;
+    }
+    .header_nav{
+        display: flex;
+    }
+}
+/* 1800px */
+@media screen and (min-width:112.5em){
+    .container{
+        grid-template-columns: auto minmax(20em,90em) auto;
+    }
+}
+/* 1920px */
+@media screen and (min-width: 120em) {
+    .container{
+        grid-template-columns: auto minmax(auto,1276px) auto;
     }
 }
