@@ -26,7 +26,6 @@ main{
             margin: 2.5em 0em;
             text-align: left;
             font-family: var(--default_font_title);
-            font-weight: 600;
             place-self: center;
             max-width: 52.5em;
             grid-row: 2;
