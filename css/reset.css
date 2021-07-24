@@ -43,6 +43,9 @@ button{border: none;padding: 1em;}
     .menu_open{
         display: flex;   
     }
+    .to_column{
+        flex-direction: column;
+    }
 @media screen and (min-width:90rem) {
     .to_center{
         place-self: center;

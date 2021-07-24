@@ -1,5 +1,6 @@
 const btn = document.querySelector('#hamburger_btn');
 const nav = document.querySelector('.header_nav');
+const container = document.querySelector('.to_center');
 
 btn.addEventListener('click',()=>{
     // Check if the btn is in state OPEN or CLOSE
@@ -12,8 +13,9 @@ btn.addEventListener('click',()=>{
         btn.classList.remove("menu_open")
         btn.textContent = "Menu"
         nav.classList.remove('header_nav_open')
+        container.classList.remove('to_column')
     } else {
-        console.log("open menu");
+        container.classList.add('to_column')
         btn.textContent = "Fermer"
         // Open the menu by removing or adding a class 
         // change aria label 
