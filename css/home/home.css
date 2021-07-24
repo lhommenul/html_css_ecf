@@ -45,6 +45,8 @@ main{
             .bubble_btn_redirect{
                 text-decoration: none;
                 padding: 0.8em 1.3em;
+                margin-right: 1.75rem;
+                margin-bottom: 1.8rem;
                 background-color: var(--bg_orange);
                 color: var(--bg_white);
             }
@@ -123,5 +125,11 @@ main{
     .bubble_title{
         margin-left: 0.5em;
         margin-right: 0.5em;
+    }
+}
+/*  1440px */
+@media screen and (min-width:90rem) {
+    .bubble_black{
+        align-items: flex-end; 
     }
 }
