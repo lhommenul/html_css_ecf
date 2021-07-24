@@ -11,13 +11,8 @@
         display: grid;
         row-gap: 1em;
     }
-
 /* media */
 
-/*  320px */
-@media screen and (min-width:20rem) {
-
-}
 /*  375px */
 @media screen and (min-width:23.43rem) {
     html{

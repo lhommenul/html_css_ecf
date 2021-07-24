@@ -114,6 +114,16 @@ header{
         flex-direction: row;
     }
 }
+.mg_tb{
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+.mg_t{
+    margin-top: 2.5rem;
+}
+.mg_b{
+    margin-top: 2.5rem;
+}
 /* ======== FOOTER ======== */
 footer{
     grid-column: 1/4;
