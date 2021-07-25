@@ -5,6 +5,10 @@ main{
     /* width: 100%; */
 }
 
+header > .to_center{
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
 /* ===== SECTION HEADER ===== */
 .section_top_home{
     max-height: 44.4em;
@@ -29,22 +33,28 @@ main{
         .bubble_black{
             background-color: rgba(0, 0, 0, 0.5);
             color: var(--bg_white);
-            display: flex;
+            display: flex;  
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 1em 0em;
             min-width: 100%;
-            text-align: center;
+            text-align: left;
         }
             .bubble_title{
+                font-family: var(--default_font_title);
+                text-align: left;
                 margin: 0.5em;
                 margin-left: 0px;
                 margin-right: 0px;
+                font-size: 4.5rem;
+                line-height: 6rem;
             }
             .bubble_btn_redirect{
                 text-decoration: none;
-                padding: 0.8em 1.3em;
+                padding: 1.25rem 1.8rem;
+                font-size: 2.5rem;
+                font-weight: 600;
+                font-family: var(--default_font_std);
                 margin-right: 1.75rem;
                 margin-bottom: 1.8rem;
                 background-color: var(--bg_orange);

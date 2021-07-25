@@ -1,6 +1,14 @@
 /*  320px */
 @media screen and (min-width:20rem) {
-
+    .img_card_top{
+        min-width: 100%;
+    }
+    .bubble_black {
+        text-align: center;
+    }
+    .bubble{
+        font-size: 0.5rem;
+    }
 }
 /*  375px */
 @media screen and (min-width:23.43rem) {
@@ -46,7 +54,7 @@
     .bubble{
         grid-column: 2;
         display: grid;
-        grid-template-columns: auto 60%;
+        grid-template-columns: auto 75%;
     }
         .bubble_black{
             grid-column: 2;
@@ -62,6 +70,12 @@
     }
 }
 @media screen and (min-width:120em){
+    .card{
+        max-height: 42.9rem;
+    }
+        .img_card_top{
+            max-height: 16.25rem;
+        }
     .section_actu{
         grid-column: 2;
     }
