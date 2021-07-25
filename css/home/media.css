@@ -54,7 +54,7 @@
     .bubble{
         grid-column: 2;
         display: grid;
-        grid-template-columns: auto 75%;
+        grid-template-columns: auto 78%;
     }
         .bubble_black{
             grid-column: 2;
