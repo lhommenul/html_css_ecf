@@ -50,6 +50,10 @@ main{
                 background-color: var(--bg_orange);
                 color: var(--bg_white);
             }
+            .bubble_btn_redirect:hover,.bubble_btn_redirect:focus{
+                color: var(--bg_orange);
+                background-color: var(--bg_white);
+            }
 
 /* ===== SECTION ACTU ===== */
 
