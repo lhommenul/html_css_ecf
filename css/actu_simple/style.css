@@ -12,3 +12,7 @@ main{
     .para_message{
         text-align: left;
     }
+    .para_message {
+        font-size:1.25rem;
+        line-height: 1,875rem;
+    }

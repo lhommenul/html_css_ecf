@@ -3,11 +3,17 @@
     .img_card_top{
         min-width: 100%;
     }
-    .bubble_black {
-        text-align: center;
-    }
     .bubble{
         font-size: 0.5rem;
+    }
+    .bubble_btn_redirect{
+        margin-right: 0rem;
+        margin-bottom: 01.2rem;
+    }
+    .bubble_title{
+        font-size: 2.6rem;
+        line-height: 3.6rem;
+        text-align: center;
     }
 }
 /*  375px */
@@ -18,7 +24,6 @@
 }
 /*  425px */
 @media screen and (min-width:26.56rem) {
-
 }
 /*  768px */
 @media screen and (min-width:48rem) {
@@ -26,6 +31,13 @@
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(2,1fr);
         column-gap: 8rem;
+    }
+    .bubble_btn_redirect{
+        margin-right: 1.75rem;
+        margin-bottom: 1.8rem;
+    }
+    .bubble_title{
+        /* font-size: 3.2rem; */
     }
 }
 /*  1024px */
@@ -42,6 +54,9 @@
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: 1fr;
     }
+    .bubble_title{
+        text-align: left;
+    }
 }
 /*  1440px */
 @media screen and (min-width:90rem) {
@@ -57,6 +72,7 @@
         grid-template-columns: auto 78%;
     }
         .bubble_black{
+            text-align: center;
             grid-column: 2;
         }
     .actu_list_tiems{
@@ -70,6 +86,13 @@
     }
 }
 @media screen and (min-width:120em){
+    .bubble_title{
+        font-size: 4.5rem;
+        line-height: 6.5rem;
+    }
+    .bubble_btn_redirect{
+        font-size: 2.5rem;
+    }
     .card{
         max-height: 42.9rem;
     }
