@@ -339,6 +339,6 @@ footer{
 /* 1920px */
 @media screen and (min-width: 120em) {
     .container{
-        grid-template-columns: auto minmax(auto,79.75rem) auto;
+        grid-template-columns: auto minmax(auto,1276px) auto;
     }
 }
